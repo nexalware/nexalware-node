@@ -1,0 +1,46 @@
+{
+  "name": "@nexalware/sdk",
+  "version": "0.1.7",
+  "description": "Typed client for the Nexalware API - control physical devices and read their telemetry from any Node/TypeScript agent or app.",
+  "keywords": ["nexalware", "iot", "device-control", "robotics", "typescript-sdk"],
+  "license": "MIT",
+  "homepage": "https://github.com/nexalware/nexalware-node#readme",
+  "repository": {
+    "type": "git", 
+    "url": "git+https://github.com/nexalware/nexalware-node.git"
+  },
+  "bugs": "https://github.com/nexalware/nexalware-node/issues",
+  "type": "module",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/esm/index.d.ts",
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "rm -rf dist && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json",
+    "prepublishOnly": "npm run build",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.6",
+    "typescript": "^5.7.2"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
