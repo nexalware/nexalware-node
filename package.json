@@ -1,12 +1,18 @@
 {
   "name": "@nexalware/sdk",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "Typed client for the Nexalware API - control physical devices and read their telemetry from any Node/TypeScript agent or app.",
-  "keywords": ["nexalware", "iot", "device-control", "robotics", "typescript-sdk"],
+  "keywords": [
+    "nexalware",
+    "iot",
+    "device-control",
+    "robotics",
+    "typescript-sdk"
+  ],
   "license": "MIT",
   "homepage": "https://github.com/nexalware/nexalware-node#readme",
   "repository": {
-    "type": "git", 
+    "type": "git",
     "url": "git+https://github.com/nexalware/nexalware-node.git"
   },
   "bugs": "https://github.com/nexalware/nexalware-node/issues",
